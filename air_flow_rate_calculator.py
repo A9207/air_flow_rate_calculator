@@ -34,9 +34,9 @@ if st.button("Calculate"):
         # Output results
         st.success("Calculation Complete!")
 
-        st.write(f"**Average Velocity, V:** {V:.2f} (m/s)")
-        st.write(f"**Diameter, D:** {D:.2f} (m)")
-        st.write(f"**Ducting Cros Section Area, A:** {A:.2f} (m²)")
+        st.write(f"**Average Velocity, V:** {V:.2f} m/s")
+        st.write(f"**Diameter, D:** {D:.2f} m")
+        st.write(f"**Ducting Cros Section Area, A:** {A:.2f} m²")
         st.write(f"### Final Q: {Q:.2f} m³/h")
 
     except Exception as e:
