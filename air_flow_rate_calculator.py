@@ -7,14 +7,14 @@ st.title("Flow Rate Calculator (m³/h)")
 st.write("Enter the required values below:")
 
 # Input fields
-P = st.number_input("Enter P (float)", min_value=0.0, format="%.4f")
+P = st.number_input("Enter P (in meter)", min_value=0.0, format="%.2f")
 
 st.subheader("Enter V values")
-V1 = st.number_input("V1", format="%.4f")
-V2 = st.number_input("V2", format="%.4f")
-V3 = st.number_input("V3", format="%.4f")
-V4 = st.number_input("V4", format="%.4f")
-V5 = st.number_input("V5", format="%.4f")
+V1 = st.number_input("V1", format="%.2f")
+V2 = st.number_input("V2", format="%.2f")
+V3 = st.number_input("V3", format="%.2f")
+V4 = st.number_input("V4", format="%.2f")
+V5 = st.number_input("V5", format="%.2f")
 
 # Calculate button
 if st.button("Calculate"):
