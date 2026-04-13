@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="Flow Calculator", page_icon="📊")
+st.set_page_config(page_title="Air Flow Calculator", page_icon="📊")
 
 st.title("Flow Rate Calculator (m³/h)")
 
