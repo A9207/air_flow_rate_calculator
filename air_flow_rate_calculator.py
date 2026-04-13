@@ -9,7 +9,7 @@ st.write("Enter the required values below:")
 # Input fields
 P = st.number_input("Enter P (in meter)", min_value=0.0, format="%.2f")
 
-st.subheader("Enter V values")
+st.subheader("Enter Air Velocity, V values")
 V1 = st.number_input("V1", format="%.2f")
 V2 = st.number_input("V2", format="%.2f")
 V3 = st.number_input("V3", format="%.2f")
@@ -34,10 +34,10 @@ if st.button("Calculate"):
         # Output results
         st.success("Calculation Complete!")
 
-        st.write(f"**Average V:** {V:.4f}")
-        st.write(f"**D:** {D:.4f}")
-        st.write(f"**A:** {A:.4f}")
-        st.write(f"### Final Q: {Q:.4f} m³/h")
+        st.write(f"**Average Velocity, V:** {V:.2f}")
+        st.write(f"**Diameter, D:** {D:.2f}")
+        st.write(f"**Ducting Cros Section Area, A:** {A:.2f}")
+        st.write(f"### Final Q: {Q:.2f} m³/h")
 
     except Exception as e:
         st.error(f"Error: {e}")
