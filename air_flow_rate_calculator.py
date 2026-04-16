@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Flow Calculator", page_icon="📊")
 
-st.title("Air Flow Rate Calculator (m³/h)")
+st.title("Air Flow Rate Calculator")
 
 st.write("Enter the required values below:")
 
@@ -28,16 +28,20 @@ if st.button("Calculate"):
         # Step 3: Area calculation
         A = (3.142 * D * D) / 4
 
-        # Step 4: Flow rate
-        Q = A * V * 3600
+        # Step 4: Flow rate in m³/h
+        Q_m3h = A * V * 3600
+
+        # Step 5: Convert to CFM
+        Q_cfm = Q_m3h * 0.5886
 
         # Output results
         st.success("Calculation Complete!")
 
         st.write(f"**Average Velocity, V:** {V:.2f} m/s")
         st.write(f"**Diameter, D:** {D:.2f} m")
-        st.write(f"**Ducting Cros Section Area, A:** {A:.2f} m²")
-        st.write(f"### Final Q: {Q:.2f} m³/h")
+        st.write(f"**Ducting Cross Section Area, A:** {A:.2f} m²")
+        st.write(f"### Final Q: {Q_m3h:.2f} m³/h")
+        st.write(f"### Final Q: {Q_cfm:.2f} CFM")
 
     except Exception as e:
         st.error(f"Error: {e}")
