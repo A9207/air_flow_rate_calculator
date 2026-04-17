@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Flow Calculator", page_icon="📊")
 
-st.title("Air Flow Rate Calculator")
+st.title("Air Flow Rate Calculator For Bag Filter System")
 
 st.write("Enter the required values below:")
 
